@@ -1,9 +1,9 @@
 ﻿using System;
 using FluentNHibernate.Automapping;
 
-namespace Listy.Web.App_Start.nh
+namespace Listy.Data.Persistence
 {
-    class ListyAutomappingConfiguration : DefaultAutomappingConfiguration
+    public class ListyAutomappingConfiguration : DefaultAutomappingConfiguration
     {
         public override bool ShouldMap(Type type)
         {

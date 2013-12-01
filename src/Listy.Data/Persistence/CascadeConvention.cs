@@ -1,9 +1,9 @@
 ﻿using FluentNHibernate.Conventions;
 using FluentNHibernate.Conventions.Instances;
 
-namespace Listy.Web.App_Start.nh
+namespace Listy.Data.Persistence
 {
-    class CascadeConvention : IReferenceConvention, IHasManyConvention, IHasManyToManyConvention
+    public class CascadeConvention : IReferenceConvention, IHasManyConvention, IHasManyToManyConvention
     {
         public void Apply(IManyToOneInstance instance)
         {

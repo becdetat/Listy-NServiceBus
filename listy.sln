@@ -16,6 +16,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listy.Core", "src\Listy.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listy.ResetTheWorld", "src\Listy.ResetTheWorld\Listy.ResetTheWorld.csproj", "{7B7715DB-D5B0-4D77-936E-514773E78C8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listy.Server", "src\Listy.Server\Listy.Server.csproj", "{0C3E9A21-A3A3-419C-8290-2218E9A91B08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listy.Messages", "src\Listy.Messages\Listy.Messages.csproj", "{2B9434B1-3AEA-4031-BD8A-4F4CB70DDA79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{7B7715DB-D5B0-4D77-936E-514773E78C8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B7715DB-D5B0-4D77-936E-514773E78C8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B7715DB-D5B0-4D77-936E-514773E78C8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C3E9A21-A3A3-419C-8290-2218E9A91B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C3E9A21-A3A3-419C-8290-2218E9A91B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C3E9A21-A3A3-419C-8290-2218E9A91B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C3E9A21-A3A3-419C-8290-2218E9A91B08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B9434B1-3AEA-4031-BD8A-4F4CB70DDA79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B9434B1-3AEA-4031-BD8A-4F4CB70DDA79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B9434B1-3AEA-4031-BD8A-4F4CB70DDA79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B9434B1-3AEA-4031-BD8A-4F4CB70DDA79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

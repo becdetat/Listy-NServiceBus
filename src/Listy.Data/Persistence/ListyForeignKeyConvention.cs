@@ -2,9 +2,9 @@
 using FluentNHibernate.Conventions;
 using Listy.Core.Extensions;
 
-namespace Listy.Web.App_Start.nh
+namespace Listy.Data.Persistence
 {
-    class ListyForeignKeyConvention : ForeignKeyConvention
+    public class ListyForeignKeyConvention : ForeignKeyConvention
     {
         protected override string GetKeyName(FluentNHibernate.Member property, Type type)
         {

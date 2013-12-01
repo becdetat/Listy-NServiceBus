@@ -1,23 +1,22 @@
 ﻿using FluentNHibernate.Automapping;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
-using Listy.Core.Configuration;
 using Listy.Data.Entities;
 using Listy.Data.Persistence;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
 
-namespace Listy.Web.App_Start.nh
+namespace Listy.Server
 {
     public class NhibernateConfig
     {
 
-        public static ISessionFactory Register(IConfigurationProvider configurationProvider)
+        public static ISessionFactory Register(string connectionString)
         {
             var persistenceConfigurer =
                 MsSqlConfiguration.MsSql2008
-                                  .ConnectionString(configurationProvider.ListyConnectionString);
+                                  .ConnectionString(connectionString);
 
             return Fluently.Configure()
                            .Database(persistenceConfigurer)

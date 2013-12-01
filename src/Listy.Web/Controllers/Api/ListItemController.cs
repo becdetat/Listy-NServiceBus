@@ -5,40 +5,25 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Listy.Data.Entities;
+using Listy.Messages;
 using Listy.Web.Models.Api.List;
 using NHibernate;
+using NServiceBus;
 
 namespace Listy.Web.Controllers.Api
 {
     public class ListItemController : ApiController
     {
-        private readonly ISessionFactory _sessionFactory;
+        private readonly IBus _bus;
 
-        public ListItemController(ISessionFactory sessionFactory)
+        public ListItemController(IBus bus)
         {
-            _sessionFactory = sessionFactory;
+            _bus = bus;
         }
 
-        public void Post(Guid id, ListItemUpdateModel model)
+        public void Post(Guid? id, ListItemUpdateModel model)
         {
-            using (var session = _sessionFactory.OpenSession())
-            using (var transaction = session.BeginTransaction())
-            {
-                var item = session.Get<ListyListItem>(id);
-                item.Name = model.Name ?? "";
-                transaction.Commit();
-            }
+            _bus.Send(model.ToUpdateListItem());
         }
-
-        //public ListyListItem Post(ListItemUpdateModel model)
-        //{
-        //    using (var session = _sessionFactory.OpenSession())
-        //    using (var transaction = session.BeginTransaction())
-        //    {
-        //        var item = new ListyListItem
-        //        item.Name = model.Name;
-        //        transaction.Commit();
-        //    }
-        //}
     }
 }

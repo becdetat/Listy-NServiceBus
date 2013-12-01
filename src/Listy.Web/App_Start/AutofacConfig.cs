@@ -10,6 +10,7 @@ using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 using Listy.Core.Configuration;
 using Listy.Web.App_Start.nh;
+using NServiceBus;
 
 namespace Listy.Web.App_Start
 {
@@ -55,6 +56,21 @@ namespace Listy.Web.App_Start
                         dynamic viewBag = ((Controller) e.Instance).ViewBag;
                         // add things to ViewBag
                     });
+
+    //        startableBus = Configure.With()
+    //.DefaultBuilder()
+    //.Log4Net(new DebugAppender { Threshold = Level.Warn })
+    //.UseTransport<Msmq>()
+    //.PurgeOnStartup(true)
+    //.UnicastBus()
+    //.RunHandlersUnderIncomingPrincipal(false)
+    //.RijndaelEncryptionService()
+    //.CreateBus();
+
+            var bus = Configure.With()
+                               .DefaultBuilder()
+                               .CreateBus();
+            builder.RegisterInstance(bus).AsImplementedInterfaces();
 
             var container = builder.Build();
 

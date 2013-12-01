@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Listy.Web.App_Start.nh
+namespace Listy.Data.Persistence
 {
     internal class ForeignKeyRelationshipNotSupportedException : Exception
     {

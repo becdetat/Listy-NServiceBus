@@ -63,6 +63,12 @@
     <Reference Include="NHibernate">
       <HintPath>..\..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
+    <Reference Include="NServiceBus">
+      <HintPath>..\..\packages\NServiceBus.Interfaces.4.2.0\lib\net40\NServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Core">
+      <HintPath>..\Listy.Server\bin\Debug\NServiceBus.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -143,10 +149,6 @@
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\ListyWebConfigurationProvider.cs" />
-    <Compile Include="App_Start\nh\CascadeConvention.cs" />
-    <Compile Include="App_Start\nh\ForeignKeyRelationshipNotSupportedException.cs" />
-    <Compile Include="App_Start\nh\ListyAutomappingConfiguration.cs" />
-    <Compile Include="App_Start\nh\ListyForeignKeyConvention.cs" />
     <Compile Include="App_Start\nh\NhibernateConfig.cs" />
     <Compile Include="Controllers\Api\ListController.cs" />
     <Compile Include="Controllers\Api\ListItemController.cs" />
@@ -290,6 +292,10 @@
     <ProjectReference Include="..\Listy.Data\Listy.Data.csproj">
       <Project>{D7185971-24E8-4E2F-B02A-C3EBD5E1F1DC}</Project>
       <Name>Listy.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Listy.Messages\Listy.Messages.csproj">
+      <Project>{2B9434B1-3AEA-4031-BD8A-4F4CB70DDA79}</Project>
+      <Name>Listy.Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
